@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Spoiler Hider",
+  "version": "1.0",
+  "description": "Hides YouTube video thumbnails and titles if they contain spoiler keywords.",
+  "permissions": [],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["keywords.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
